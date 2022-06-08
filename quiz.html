@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1 class="text-center">ITパスポート過去問</h1>
+  <div class="container">
+    
+    <div class="jumbotron mt-5">
+      <div class="d-flex justify-content-center">
+        <div id="js-question" class="alert alert-primary" role="alert">
+          A simple primary alert—check it out!
+        </div>
+      </div>
+      
+      <div id="js-items" class="d-flex justify-content-center">
+        <div class="m-2">
+          <button type="button" id="js-btn-1" class="btn btn-primary">Primary</button>
+        </div>
+        <div class="m-2">
+          <button type="button" id="js-btn-2" class="btn btn-primary">Primary</button>
+        </div>
+        <div class="m-2">
+          <button type="button" id="js-btn-3" class="btn btn-primary">Primary</button>
+        </div>
+        <div class="m-2">
+          <button type="button" id="js-btn-4" class="btn btn-primary">Primary</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const quiz = [
+      {
+      question : "CPUにおけるプログラムカウンタの説明はどれか。",
+      answers :[
+      '次に実行する命令が入っている主記憶のアドレスを保持する。',
+      'プログラムの実行に必要な主記憶領域の大きさを保持する。',
+      'プログラムを構成する命令数を保持する。',
+      '命令実行に必要なデータが入っている主記憶のアドレスを保持する。'
+        ],
+        correct :'次に実行する命令が入っている主記憶のアドレスを保持する。'
+      },{
+        question : "イントラネットの説明として，適切なものはどれか。",
+      answers :[
+      'インターネットの技術を利用して構築された組織内ネットワーク',
+      '社外の誰もが自由に接続可能な社内ネットワーク',
+      '複数の企業間で電子商取引を行うために構築されたネットワーク',
+      '無線を使わずに有線だけで構成されたネットワーク'
+        ],
+        correct :'インターネットの技術を利用して構築された組織内ネットワーク'
+      },{
+        question : "IPアドレスに関する記述のうち，適切なものはどれか。",
+      answers :[
+      '192.168.1.1のように4バイト表記のIPアドレスの数は，地球上の人口(約70億)よりも多い。',
+      'IPアドレスは，各国の政府が管理している。',
+      'IPアドレスは，国ごとに重複のないアドレスであればよい。',
+      'プライベートIPアドレスは，同一社内などのローカルなネットワーク内であれば自由に使ってよい。'
+        ],
+        correct :'プライベートIPアドレスは，同一社内などのローカルなネットワーク内であれば自由に使ってよい。'
+      },{
+        question : "IEEE 802.11伝送規格を使用した異なるメーカの無線LAN製品同士で相互接続性が保証されていることを示すブランド名はどれか。",
+      answers :[
+      'MVNO',
+      'NFC',
+      'Wi-Fi',
+      'WPA2'
+        ],
+        correct :'Wi-Fi'
+      },{
+        question : "データベースにおける外部キーに関する記述のうち，適切なものはどれか。",
+      answers :[
+      '外部キーがもつ特性を，一意性制約という。',
+      '外部キーを設定したフィールドには，重複する値を設定することはできない。',
+      '一つの表に複数の外部キーを設定することはできない。',
+      '複数のフィールドを，まとめて一つの外部キーとして設定することができる。'
+        ],
+        correct :'複数のフィールドを，まとめて一つの外部キーとして設定することができる。'
+      },{
+        question : "ネットワークの交換方式に関する記述のうち，適切なものはどれか。",
+      answers :[
+      '回線交換方式では，通信利用者間で通信経路を占有するので，接続速度や回線品質の保証を行いやすい。',
+      '回線交換方式はメタリック線を使用するので，アナログ信号だけを扱える。',
+      'パケット交換方式は，複数の端末で伝送路を共有しないので，通信回線の利用効率が悪い。',
+      'パケット交換方式は無線だけで利用でき，回線交換方式は有線だけで利用できる。'
+        ],
+        correct :'回線交換方式では，通信利用者間で通信経路を占有するので，接続速度や回線品質の保証を行いやすい。'
+      },{
+        question : "ネットワークにおけるDNSの役割として，適切なものはどれか。",
+      answers :[
+      'クライアントからのIPアドレス割当て要求に対し，プールされたIPアドレスの中から未使用のIPアドレスを割り当てる。',
+      'クライアントからのファイル転送要求を受け付け，クライアントへファイルを転送したり，クライアントからのファイルを受け取って保管したりする。',
+      'ドメイン名とIPアドレスの対応付けを行う。',
+      'メール受信者からの読出し要求に対して，メールサーバが受信したメールを転送する。'
+        ],
+        correct :'ドメイン名とIPアドレスの対応付けを行う。'
+      },{
+        question : "URLに関する説明として，適切なものはどれか。",
+      answers :[
+      'Webページとブラウザとの通信プロトコルである。',
+      'Webページの更新履歴を知らせるメッセージである。',
+      'Webページのコンテンツ(本文)を記述するための文法である。',
+      'Webページの場所を示すための表記法である。'
+        ],
+        correct :'Webページの場所を示すための表記法である。'
+      },{
+        question : "関係データベースの主キーに関する記述のうち，適切なものはどれか。",
+      answers :[
+      '各表は，主キーだけで関係付ける。',
+      '主キーの値として，同ーのものがあってもよい。',
+      '主キーの値として，NULLをもつことができない。',
+      '複数の列を組み合わせて主キーにすることはできない。'
+        ],
+        correct :'主キーの値として，NULLをもつことができない。'
+      },{
+        question : "PCで電子メールを読むときに，PCにメールをサーバからダウンロードするのではなくサーバ上で保管し管理する。未読管理やメールの削除やフォルダの振分け状態などが会社や自宅にあるどのPCからも同一に見えるようにできるメールプロトコルはどれか。",
+      answers :[
+      'APOP',
+      'IMAP4',
+      'POP3',
+      'SMTP'
+        ],
+        correct :'IMAP4'
+      }
+      ];
+
+      const quizLength = quiz.length;
+      let quizIndex = 0;
+      let score = 0;
+
+    const $button = document.getElementsByTagName('button');
+    const buttonLength = $button.length;
+    // 文字列をhtmlに反映
+    const setupQuiz = () => {
+      document.getElementById('js-question').textContent = quiz[quizIndex].question;
+      let buttonIndex = 0;
+      while(buttonIndex < buttonLength){
+        $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
+        buttonIndex++;
+      }
+    }
+
+    setupQuiz();
+    
+    const clickHandler = (e) => {
+
+      if(quiz[quizIndex].correct === e.target.textContent){
+        alert('yes!');
+        score++;
+      }else {
+        alert('no!!!');
+      }
+      quizIndex++;
+      
+      if (quizIndex < quizLength){
+        // 問題がまだあればこちらを実行
+        setupQuiz();
+      }else{
+        // 問題が終了ならこちら
+        alert(`終了。正解数は${quizLength}問中${score}問でした`);
+      }
+
+    }
+
+// クリックしたら正誤判定
+let handlerIndex = 0;
+while (handlerIndex < buttonLength) {
+  $button[handlerIndex].addEventListener('click',(e) => {
+  clickHandler(e);
+  });
+  handlerIndex++;
+}
+
+  </script>
+</body>
+</html>
