@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!-- ナビゲーションメニュー -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">学習の記録</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#profile">profile</a>
+            <a class="nav-link" href="#practice">practice</a>
+            <a class="nav-link" href="#works">works</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <img src="https://picsum.photos/1400/600" class="img-fluid" alt="Responsive image" >
+
+    <div class="container py-4">
+      <!-- profile -->
+      <h2 id="profile">自己紹介</h2>
+      <p>
+        1987年生まれの34歳、中学卒業後進学せずスーパーのレジ係や居酒屋でのアルバイトで生計を立てながら18歳でメーカーの営業職に就職。<br>
+        21歳で個人事業主として飲食店の店舗経営を経て27歳で介護職へ転職、2022年3月まで介護福祉士として就労していました。<br>
+        小学校のでのプログラミングの必修化など最近のプログラミング関連のニュースから興味を持ち独学でHTML、CSSを始めJavaScriptを触り始めたところ作りたいと思ったものを作れる、それが動くということが楽しくて嵌ってしまいました。<br>
+        長所はどんなことにも楽しさを見出すこと。短所は納得するまで止めれないこと。実務経験はありませんが、絶対にエンジニアとして働きたいので就職出来るまで就職活動を続けます。<br>
+
+      </p>
+      <!-- practice -->
+      <h2 id="practice">学習の割合</h2>
+      <p>2022年4月より始めたプログラミング学習約500時間の時間配分です。今後はvue.jsなどフレームワークを中心として学習したいと考えています</p>
+      <div class="progress">
+          <div class="progress-bar bg-dark" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">HTML&CSS</div>
+      </div>
+      <div class="progress">
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">javascript</div>
+      </div>
+      <div class="progress">
+          <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">bootstrap</div>
+      </div>
+      <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">vue.js</div>
+      </div>
+      <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">VSCode</div>
+      </div>
+      <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 15%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">GitHub</div>
+      </div>
+      <!-- 制作物 -->
+      <h2 id="works">制作物</h2>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">数独</h5>
+              <p class="card-text">数独の問題を入力したら答えが出るアプリです。数独がどうしても解けなくて作ってみました。レスポンシブ対応出来ていないので修正予定です</p>
+              <a href="#" class="btn btn-primary">Go</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">ITパスポート過去問</h5>
+              <p class="card-text">ITパスポート試験の過去問１０問とリザルトの表示が出来るようにしました。CSSはBootstrapを使用しています。</p>
+              <a href="quiz.html" class="btn btn-primary">Go</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">TODOリスト</h5>
+              <p class="card-text">リストの追加、終了、削除が出来るTODOリストです。ローカルストレージを使用しデータが残せる用にしています。</p>
+              <a href="todo.html" class="btn btn-primary">Go</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <h1>Hello, world!</h1>
+    
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+  </html>
